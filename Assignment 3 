@@ -1,0 +1,21 @@
+#1
+sed 's/Zoo//g' pandas.txt > nozoopandas.txt
+#2
+sort -k2 pandas.txt | awk '{print $1, $4, $2}' > sortedpandas.txt
+#3
+awk '{print $5}' pandas.txt | sort > alphlocation.txt
+#4
+sed 's/'female'/F/' pandas.txt |sed 's/'male'/M/'>mfpandas.txt
+#5
+grep -c 'October.*female\|female.*October' pandas.txt
+#6
+nl pandas.txt > pandass.txt
+#7
+sed -n '1p; 6p; 17p' pandas.txt > pandasyay.txt
+#8
+grep -nr "x" -i pandas.txt
+#9
+awk '{arr[$5]++}END{for(i in arr)if(arr[i]==1)print i}' pandas.txt > pandalocations.txt
+#10
+sort -k4 -n pandas.txt | awk '$4 <= 10' | awk '{print $1, $4}' > panda11.txt
+
